@@ -1,0 +1,13 @@
+.staimg{
+    height:90vh;
+    background-image: url("../assets/images/eplsta.svg") ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.frame{
+    background-image: url("../assets/images/Frame.svg");
+    background-repeat: no-repeat;
+    background-color: #000032;
+    height:1500px;
+    background-size: 100%;
+}

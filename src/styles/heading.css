@@ -1,0 +1,16 @@
+.head{
+    height:15vh;
+    background-color: 
+    rgba(38, 37, 81, 1);
+    align-items: center;
+}
+.heading{
+    font-size: 4rem;
+    font-weight: 900;
+-webkit-text-fill-color: transparent;
+background-clip: text;font-size: 4rem;
+font-weight: 900;
+background: linear-gradient(180deg, #FFBF1C 61.44%, rgba(255, 217, 118, 0) 80.56%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,10 @@
+.land-nav{
+    height:10vh;
+    background-color: #262551;
+    align-items: center;
+}
+.land-nav a{
+    color:white;
+    font-size: 2rem;
+    font-weight: 800;
+}
