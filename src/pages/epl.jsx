@@ -6,10 +6,8 @@ export default function Epl(){
         <div className="epl">
         <Heading title={"ENGLISH PREMIER LEAGUE"}/>
         <div className="staimg">
-
         </div>
-        <div className="frame">
-            
+        <div className="frame">  
         </div>
         </div>
     )
