@@ -16,7 +16,7 @@ export default function Epl(){
         <div className="staimg">
         </div>
         <div className="frame">  
-            <div className="team-icons grid grid-cols-4 gap-20">
+            <div className="team-icons pt-20 pl-20 grid grid-cols-4 ">
                 <button className="col-span-2"><img src={image7}/></button>    
                 <button><img src={image5}/></button>
             </div>
@@ -24,7 +24,7 @@ export default function Epl(){
                 <button className="col-start-2 col-span-2"><img src={image6}/></button>
                 <button><img src={image9}/></button>
             </div>
-            <div className="team-icons grid grid-cols-4 gap-20"> 
+            <div className="team-icons pl-20 grid grid-cols-4 gap-20"> 
                 <button className="col-span-2"><img src={image8}/></button>
                 <button><img src={image10}/></button>
             </div>
