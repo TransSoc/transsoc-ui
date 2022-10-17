@@ -40,7 +40,7 @@ async function handleClick(team){
         <Heading title={"ENGLISH PREMIER LEAGUE"}/>
         <div className="staimg">
         {
-        data.map((ele) => <div>{ele.name}</div>)
+        data?.map((ele) => <div>{ele.name}</div>)
         }
         </div>
         <div className="frame">  
