@@ -40,7 +40,7 @@ async function handleClick(team){
       }
     
 }
-        const cards= data.map((ele) => {
+        const cards= data?.map((ele) => {
             return ( 
                 <Card 
                     name={ele.name} 
