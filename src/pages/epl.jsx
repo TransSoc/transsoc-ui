@@ -32,12 +32,13 @@ async function handleClick(team){
     const docSnap = await getDoc(doc(db, "team/akbBER4RsvS9beA0c0ao/"+team+"/data"));
     if (docSnap.exists()) {
         console.log("Document data:", docSnap.data().linked);
+        window.scrollTo({top: 100, left: 0, behavior: 'smooth'});
         setData(docSnap.data().linked)
       } else {
         // doc.data() will be undefined in this case
         console.log("No such document!");
       }
-      window.scrollTo({top: 100, left: 0, behavior: 'smooth'});
+    
 }
         const cards= data.map((ele) => {
             return ( 
