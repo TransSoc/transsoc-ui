@@ -9,8 +9,12 @@ import newc from "../assets/images/image 12.svg"
 import brent from "../assets/images/image 11.svg"
 import Heading from "../components/heading";
 import "../styles/epl.css"
+import "../styles/Card.css"
 import db from "../components/firebase";
 import { collection,doc,getDocs,getDoc} from "firebase/firestore";
+
+import Card from "../components/Card";
+
 export default function Epl(){
 const[data,setData]=useState()
 // async function getTeam(){
@@ -28,35 +32,44 @@ async function handleClick(team){
     const docSnap = await getDoc(doc(db, "team/akbBER4RsvS9beA0c0ao/"+team+"/data"));
     if (docSnap.exists()) {
         console.log("Document data:", docSnap.data().linked);
+        window.scrollTo({top: 100, left: 0, behavior: 'smooth'});
         setData(docSnap.data().linked)
       } else {
         // doc.data() will be undefined in this case
         console.log("No such document!");
       }
-      window.scrollTo({top: 100, left: 0, behavior: 'smooth'});
+    
 }
+        const cards= data?.map((ele) => {
+            return ( 
+                <Card 
+                    name={ele.name} 
+                />
+            )
+        })
+
     return(
         <div className="epl">
         <Heading title={"ENGLISH PREMIER LEAGUE"}/>
+
         <div className="staimg">
-        {
-        data?.map((ele) => <div>{ele.name}</div>)
-        }
+            <div className="cards-list">{cards}</div>
         </div>
+
         <div className="frame">  
-            <div className="team-icons pt-20 pl-20 grid grid-cols-4 ">
-                <button className="col-span-2" onClick={()=>handleClick("wolves")}><img src={wol}/></button>    
-                <button onClick={()=>handleClick("arsenal")}><img src={ars}/></button>
+            <div className="team-icons grid pt-2 pl-2 grid-cols-4 md:pt-20 md:pl-20  md:grid-cols-4 md:gap-20">
+                <button className="gap-20  md:col-span-2" onClick={()=>handleClick("wolves")}><img src={wol}/></button>    
+                <button clasName="arsenal " onClick={()=>handleClick("arsenal")}><img src={ars}/></button>
             </div>
-            <div className="team-icons grid grid-cols-4 gap-20">
+            <div className="team-icons grid grid-cols-4 md:gap-20">
                 <button className="col-start-2 col-span-2" onClick={()=>handleClick("brighton")}><img src={bright}/></button>
                 <button onClick={()=>handleClick("manci")}><img src={manci}/></button>
             </div>
-            <div className="team-icons pl-20 grid grid-cols-4 gap-20"> 
+            <div className="team-icons md:pl-20 grid grid-cols-4 md:gap-20"> 
                 <button className="col-span-2" onClick={()=>handleClick("manu")}><img src={manu}/></button>
                 <button onClick={()=>handleClick("liverpool")}><img src={liv}/></button>
             </div>
-            <div className="team-icons grid grid-cols-4 gap-20">
+            <div className="team-icons grid grid-cols-4 md:gap-20">
                 <button className="col-start-2  col-span-2" onClick={()=>handleClick("newcastle")}><img src={newc}/></button>
                 <button onClick={()=>handleClick("brentford")}><img src={brent}/></button>
             </div>

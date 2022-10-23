@@ -4,6 +4,14 @@
     background-repeat: no-repeat;
     background-size: 100%;
 }
+
+.cards-list{
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    padding:10px 10px 0px 10px ;
+}
+
 .frame{
     background-image: url("../assets/images/Frame.svg");
     background-repeat: no-repeat;
@@ -12,3 +20,14 @@
     background-size: 100%;
 }
 
+@media screen and (max-width:780px) {
+    .staimg{
+        height: 23vh;
+    }
+    .frame{
+        height: 700px;
+    }
+    /* .team-icons{
+        height: 2px;
+    } */
+}

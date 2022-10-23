@@ -1,0 +1,11 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 175px;
+}
+
+.cardName{
+    display: flex;
+    flex-direction: column;
+}
