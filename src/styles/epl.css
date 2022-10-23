@@ -4,6 +4,14 @@
     background-repeat: no-repeat;
     background-size: 100%;
 }
+
+.cards-list{
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    padding-top:10px ;
+}
+
 .frame{
     background-image: url("../assets/images/Frame.svg");
     background-repeat: no-repeat;

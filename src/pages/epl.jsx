@@ -9,8 +9,12 @@ import newc from "../assets/images/image 12.svg"
 import brent from "../assets/images/image 11.svg"
 import Heading from "../components/heading";
 import "../styles/epl.css"
+import "../styles/Card.css"
 import db from "../components/firebase";
 import { collection,doc,getDocs,getDoc} from "firebase/firestore";
+
+import Card from "../components/Card";
+
 export default function Epl(){
 const[data,setData]=useState()
 // async function getTeam(){
@@ -35,14 +39,22 @@ async function handleClick(team){
       }
       window.scrollTo({top: 100, left: 0, behavior: 'smooth'});
 }
+        const cards= data.map((ele) => {
+            return ( 
+                <Card 
+                    name={ele.name} 
+                />
+            )
+        })
+
     return(
         <div className="epl">
         <Heading title={"ENGLISH PREMIER LEAGUE"}/>
+
         <div className="staimg">
-        {
-            data?.map((ele) => <div>{ele.name}</div>)
-        }
+            <div className="cards-list">{cards}</div>
         </div>
+
         <div className="frame">  
             <div className="team-icons grid pt-2 pl-2 grid-cols-4 md:pt-20 md:pl-20  md:grid-cols-4 md:gap-20">
                 <button className="gap-20  md:col-span-2" onClick={()=>handleClick("wolves")}><img src={wol}/></button>    
