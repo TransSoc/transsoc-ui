@@ -7,7 +7,9 @@
 
 .cards-list{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap:20px;
     height: 200px;
     padding:10px 10px 0px 10px ;
 }
@@ -23,6 +25,12 @@
 @media screen and (max-width:780px) {
     .staimg{
         height: 23vh;
+    }
+
+    .cards-list{
+        height: 50px;
+        padding: 2px 2px 0px 2px;
+        font-size: 12px;
     }
     .frame{
         height: 700px;
