@@ -11,3 +11,15 @@
     height:1500px;
     background-size: 100%;
 }
+
+@media screen and (max-width:780px) {
+    .staimg{
+        height: 23vh;
+    }
+    .frame{
+        height: 700px;
+    }
+    /* .team-icons{
+        height: 2px;
+    } */
+}
