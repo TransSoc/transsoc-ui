@@ -6,12 +6,12 @@
 }
 
 .cards-list{
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap:20px;
-    height: 200px;
-    padding:10px 10px 0px 10px ;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit,300px);
+    grid-gap: 10px; */
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 50px;
 }
 
 .frame{

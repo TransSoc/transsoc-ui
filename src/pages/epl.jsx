@@ -12,8 +12,49 @@ import "../styles/epl.css"
 import "../styles/Card.css"
 import db from "../components/firebase";
 import { collection,doc,getDocs,getDoc} from "firebase/firestore";
-
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from "react-slick";
 import Card from "../components/Card";
+
+const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    dots: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    speed: 500,
+    arrows : true,
+    responsive: [
+      {
+        breakpoint: 990,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+          centerMode: false,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false
+        }
+      }
+    ]
+  };
 
 export default function Epl(){
 const[data,setData]=useState()
@@ -43,7 +84,8 @@ async function handleClick(team){
         const cards= data?.map((ele) => {
             return ( 
                 <Card 
-                    name={ele.name} 
+                    {...ele} 
+                    key={ele}
                 />
             )
         })
@@ -51,9 +93,14 @@ async function handleClick(team){
     return(
         <div className="epl">
         <Heading title={"ENGLISH PREMIER LEAGUE"}/>
-
+        
         <div className="staimg">
-            <div className="cards-list">{cards}</div>
+           
+             <div className="cards-list">
+             <Slider {...settings}>
+                {cards}
+            </Slider>
+            </div>
         </div>
 
         <div className="frame">  
