@@ -1,12 +1,4 @@
 import React, { useState } from "react";
-import wol from "../assets/images/image 7.svg"
-import ars from "../assets/images/image 5.svg"
-import bright from "../assets/images/image 6.svg"
-import manci from "../assets/images/image 9.svg"
-import manu from "../assets/images/image 8.svg"
-import liv from "../assets/images/image 10.svg"
-import newc from "../assets/images/image 12.svg"
-import brent from "../assets/images/image 11.svg"
 import Heading from "../components/heading";
 import "../styles/epl.css"
 import "../styles/Card.css"
@@ -16,6 +8,15 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from "react-slick";
 import Card from "../components/Card";
+import real from "../assets/images/real.png";
+import rs from "../assets/images/rs.png";
+import vila from "../assets/images/vila.png";
+import barca from "../assets/images/barca.png";
+import atm from "../assets/images/atm.png";
+import atc from "../assets/images/atc.png";
+import sev from "../assets/images/sev.png";
+import rayo from "../assets/images/rayo.png";
+
 
 const settings = {
     className: "center",
@@ -56,7 +57,7 @@ const settings = {
     ]
   };
 
-export default function Epl(){
+export default function Laliga(){
 const[data,setData]=useState()
 // async function getTeam(){
 // const docSnap = await getDoc(doc(db, "team/akbBER4RsvS9beA0c0ao/manci/wjvwOKqbycpQnG5n8ozm"));
@@ -91,8 +92,8 @@ async function handleClick(team){
         })
 
     return(
-        <div className="epl">
-        <Heading title={"ENGLISH PREMIER LEAGUE"}/>
+        <div className="laliga">
+        <Heading title={"Laliga"}/>
         
         <div className="staimg">
            
@@ -104,14 +105,14 @@ async function handleClick(team){
         </div>
 
         <div className="frame grid grid-cols-4 items-center ">  
-                <button className="h-[25vh] flex items-center justify-center" onClick={()=>handleClick("wolves")}><img  src={wol} className="h-[100%]"/></button>    
-                <button className="col-start-3 h-[25vh] flex items-center justify-center"  onClick={()=>handleClick("arsenal")}><img src={ars} className="h-[100%]"/></button>
-                <button className="col-start-2 h-[25vh] flex items-center justify-center" onClick={()=>handleClick("brighton")}><img src={bright} className="h-[100%]" /></button>
-                <button className="col-start-4 h-[25vh] flex items-center justify-center" onClick={()=>handleClick("manci")}><img src={manci} className="h-[100%]" /></button>
-                <button className="h-[25vh] flex items-center justify-center" onClick={()=>handleClick("manu")}><img src={manu} className="h-[100%]"/></button>
-                <button className="col-start-3 h-[25vh] flex items-center justify-center" onClick={()=>handleClick("liverpool")}><img src={liv} className="h-[100%]"/></button>
-                <button className="col-start-2 h-[25vh] flex items-center justify-center" onClick={()=>handleClick("newcastle")}><img src={newc} className="h-[100%]"/></button>
-                <button className="col-start-4 h-[25vh] flex items-center justify-center" onClick={()=>handleClick("brentford")}><img src={brent} className="h-[100%]"/></button> 
+                <button className="h-[25vh] flex items-center justify-center" onClick={()=>handleClick("wolves")}><img  src={real} className="h-[100%]"/></button>    
+                <button className="col-start-3 h-[25vh] flex items-center justify-center"  onClick={()=>handleClick("arsenal")}><img src={barca} className="h-[100%]"/></button>
+                <button className="col-start-2 h-[25vh] flex items-center justify-center" onClick={()=>handleClick("brighton")}><img src={atm} className="h-[100%]" /></button>
+                <button className="col-start-4 h-[25vh] flex items-center justify-center" onClick={()=>handleClick("manci")}><img src={atc} className="h-[100%]" /></button>
+                <button className="h-[25vh] flex items-center justify-center" onClick={()=>handleClick("manu")}><img src={vila} className="h-[100%]"/></button>
+                <button className="col-start-3 h-[25vh] flex items-center justify-center" onClick={()=>handleClick("liverpool")}><img src={sev} className="h-[100%]"/></button>
+                <button className="col-start-2 h-[25vh] flex items-center justify-center" onClick={()=>handleClick("newcastle")}><img src={rayo} className="h-[100%]"/></button>
+                <button className="col-start-4 h-[25vh] flex items-center justify-center" onClick={()=>handleClick("brentford")}><img src={rs} className="h-[100%]"/></button> 
         </div>
 
 

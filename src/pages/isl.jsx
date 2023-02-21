@@ -56,7 +56,7 @@ const settings = {
     ]
   };
 
-export default function Epl(){
+export default function Isl(){
 const[data,setData]=useState()
 // async function getTeam(){
 // const docSnap = await getDoc(doc(db, "team/akbBER4RsvS9beA0c0ao/manci/wjvwOKqbycpQnG5n8ozm"));
@@ -91,8 +91,8 @@ async function handleClick(team){
         })
 
     return(
-        <div className="epl">
-        <Heading title={"ENGLISH PREMIER LEAGUE"}/>
+        <div className="isl">
+        <Heading title={"Indian Super League"}/>
         
         <div className="staimg">
            
