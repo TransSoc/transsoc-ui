@@ -2,13 +2,41 @@
     height:90vh;
     background-image: url("../assets/images/eplsta.svg") ;
     background-repeat: no-repeat;
-    background-size: 100%;
-}
-.frame{
-    background-image: url("../assets/images/Frame.svg");
-    background-repeat: no-repeat;
-    background-color: #000032;
-    height:1500px;
-    background-size: 100%;
+    background-size: cover;
 }
 
+.cards-list{
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit,300px);
+    grid-gap: 10px; */
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.frame{
+    background-image: url("../assets/images/Frame.svg");
+    background-repeat: repeat;
+    background-color: #000032;
+    background-size: contain;
+}
+
+@media screen and (max-width:780px) {
+    .staimg{
+        height: 70vh;
+        background-size: cover;
+    }
+
+    .cards-list{
+        height: 50px;
+        padding: 2px 2px 0px 2px;
+        font-size: 12px;
+    }
+    .frame{
+        height: 100vh;
+        background-size: cover;
+    }
+    /* .team-icons{
+        height: 2px;
+    } */
+}
